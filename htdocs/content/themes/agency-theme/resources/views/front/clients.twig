@@ -1,0 +1,13 @@
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            {% for client in front_fields['clients'] %}
+            <div class="col-md-3 col-sm-6">
+                <a href="{{ client['site'] }}">
+                    <img class="img-fluid d-block mx-auto" src="{{ fn.wp_get_attachment_image_url(client['logo'], 'logo') }}" alt="{{ client['title'] }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
